@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginEnd="26dp"
+        android:layout_centerInParent="true"
+        app:cardCornerRadius="8dp"
+        app:cardUseCompatPadding="false"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <LinearLayout
+                android:id="@+id/newAddressLyt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/txtNoAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="7dp"
+                    android:fontFamily="@font/regular"
+                    android:text="@string/no_address_found"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="italic"
+                    android:visibility="visible" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnAddAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/bold"
+                    android:text="@string/add_address"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:textSize="15sp"
+                    android:visibility="visible"
+                    app:backgroundTint="#FF5722"
+                    app:cornerRadius="25dp"
+                    app:icon="@drawable/plus"
+                    app:iconSize="18sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/selectAddressLyt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="7dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical"
+                tools:visibility="visible"
+                android:visibility="gone">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/main_color"
+                    android:checked="true"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Address Selected"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:textColor="@color/black" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/fullAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+                        android:textColor="@color/secondaryBlack"
+                        tools:text="Plot No: 382,\nNear Water Tank, New Raja Rajeswri Pet,\nVijayawada, 520015" />
+
+
+                </LinearLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnChangeAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/bold"
+                    android:text="@string/change_address"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:textSize="15sp"
+                    app:backgroundTint="#FF5722"
+                    app:cornerRadius="25dp"
+                    app:icon="@drawable/edit"
+                    app:iconSize="20sp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnContinue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/bold"
+                    android:text="Continue"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:textSize="15sp"
+                    app:backgroundTint="#4CAF50"
+                    app:cornerRadius="25dp"
+                    app:iconSize="20sp" />
+
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+        </RelativeLayout>
+
+
+
+
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

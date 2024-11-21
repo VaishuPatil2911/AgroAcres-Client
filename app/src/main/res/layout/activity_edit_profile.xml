@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.EditProfileActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_red_color"
+        app:title="Edit Profile"
+        app:titleTextColor="@color/white"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:id="@+id/toolbar"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/name"
+            android:textColor="@color/secondaryBlack"
+            android:textAllCaps="true"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="e.g John"
+            android:background="@drawable/input_bg"
+            android:padding="10dp"
+            android:layout_marginTop="5dp"
+            android:inputType="textPersonName"
+            android:imeOptions="actionNext"
+            android:fontFamily="@font/bold"
+            android:id="@+id/inputUsername"
+            android:textColor="@color/black"
+            />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/phone_number"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/secondaryBlack"
+            android:textAllCaps="true"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="e.g +91 832*****46"
+            android:background="@drawable/input_bg"
+            android:padding="10dp"
+            android:layout_marginTop="5dp"
+            android:inputType="phone"
+            android:imeOptions="actionNext"
+            android:id="@+id/inputPhone"
+            android:fontFamily="@font/bold"
+
+            android:textColor="@color/black"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/email"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/secondaryBlack"
+            android:textAllCaps="true"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:hint="e.g john@gmail.com"
+            android:background="@drawable/input_bg"
+            android:padding="10dp"
+            android:enabled="false"
+            android:layout_marginTop="5dp"
+            android:inputType="textEmailAddress"
+            android:imeOptions="actionNext"
+            android:id="@+id/inputEmail"
+            android:fontFamily="@font/bold"
+
+            android:textColor="@color/black"
+
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/you_can_t_change_email"
+            android:textSize="12sp"
+            android:fontFamily="@font/bold"
+            android:textColor="@color/cat_textColor"
+            android:layout_marginTop="5dp"
+            />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnUpdate"
+        style="@style/Widget.Material3.Button.UnelevatedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/bold"
+        android:text="Update"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+        app:backgroundTint="#3F51B5"
+        app:cornerRadius="5dp" />
+
+</RelativeLayout>

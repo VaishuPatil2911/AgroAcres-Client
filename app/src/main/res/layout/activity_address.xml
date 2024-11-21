@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CartSystem.AddressActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_red_color"
+        app:title="Add Address"
+        android:id="@+id/toolbar"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_above="@id/btnSave"
+        android:fillViewport="true"
+        android:visibility="visible"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:padding="5dp"
+                android:text="Locale: INDIA"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textColor="@color/main_color" />
+
+
+            <EditText
+                android:id="@+id/inputFirstName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/outline_et"
+                android:hint="Full Name"
+                android:padding="10dp"
+                android:backgroundTint="@color/blue_50"
+                android:inputType="textCapSentences|textPersonName"
+                android:imeOptions="actionNext"
+                android:textColor="@color/black" />
+
+
+            <EditText
+                android:id="@+id/inputPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/outline_et"
+                android:hint="Phone Number"
+                android:inputType="phone"
+                android:padding="10dp"
+                android:imeOptions="actionNext"
+                android:backgroundTint="@color/blue_50"
+
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/inputHouse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/outline_et"
+                android:hint="House No:"
+                android:inputType="text"
+                android:padding="10dp"
+                android:backgroundTint="@color/blue_50"
+                android:imeOptions="actionNext"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="(e.g H no: 371)"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/iconColor"
+                android:fontFamily="@font/regular"
+                />
+
+            <EditText
+                android:id="@+id/inputArea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/outline_et"
+                android:backgroundTint="@color/blue_50"
+
+                android:hint="Area Name"
+                android:inputType="textMultiLine"
+                android:padding="10dp"
+                android:textColor="@color/black" />
+
+
+            <EditText
+                android:id="@+id/inputLandMark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/outline_et"
+                android:backgroundTint="@color/blue_50"
+
+                android:hint="Landmark"
+                android:inputType="text"
+                android:padding="10dp"
+                android:imeOptions="actionNext"
+
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/inputCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/outline_et"
+                android:hint="City"
+                android:inputType="textCapSentences"
+                android:padding="10dp"
+                android:imeOptions="actionNext"
+                android:backgroundTint="@color/blue_50"
+
+                android:textColor="@color/black" />
+
+
+
+            <EditText
+                android:id="@+id/inputPinCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/outline_et"
+                android:hint="Pin Code"
+                android:inputType="number"
+                android:padding="10dp"
+                android:imeOptions="actionNext"
+                android:backgroundTint="@color/blue_50"
+
+                android:textColor="@color/black" />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSave"
+        style="@style/Widget.Material3.Button.UnelevatedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/bold"
+        android:text="Save"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+        app:backgroundTint="#3F51B5"
+        app:cornerRadius="5dp" />
+
+
+</RelativeLayout>

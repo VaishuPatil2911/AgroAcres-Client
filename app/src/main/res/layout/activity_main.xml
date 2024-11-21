@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_red_color"
+        android:id="@+id/toolbar"
+        app:title="Home"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar">
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        >
+
+        <RelativeLayout
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/circle_bg"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:backgroundTint="@color/main_color"
+            android:layout_marginEnd="10dp"
+            android:id="@+id/accountLyt"
+            >
+
+            <TextView
+                android:id="@+id/firstLetter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/bold"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:visibility="visible"
+                tools:text="-" />
+
+
+
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="For You"
+                android:padding="5dp"
+                android:textSize="15sp"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginTop="10dp"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+
+                >
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    />
+
+
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:indeterminate="true"
+                    android:indeterminateTint="@android:color/holo_red_light"
+                    android:id="@+id/progressBar"
+                    android:visibility="gone"
+                    />
+
+                <RelativeLayout
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/circle_bg"
+                    android:layout_alignParentEnd="true"
+                    android:elevation="5dp"
+                    android:backgroundTint="#03A9F4"
+                    android:id="@+id/cartItemLyt"
+                    android:visibility="gone"
+                    tools:visibility="visible"
+                    >
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30sp"
+                        android:src="@drawable/bag"
+                        android:layout_centerInParent="true"
+                        app:tint="@color/white"
+                        android:id="@+id/imgCartBag"
+                        />
+
+                    <RelativeLayout
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/circle_bg"
+                        android:elevation="4dp"
+                        android:id="@+id/badgeLyt"
+                        android:visibility="visible"
+                        android:layout_marginStart="-13dp"
+                        android:layout_toEndOf="@id/imgCartBag"
+                        android:layout_marginTop="10dp"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="12"
+                            android:layout_centerInParent="true"
+                            android:textSize="10sp"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/bold"
+                            android:id="@+id/badgeCount"
+                            tools:ignore="SmallSp" />
+
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

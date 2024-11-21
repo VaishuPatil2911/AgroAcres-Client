@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Agro Acres</string>
+    <string name="emailEmail">Email</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="name">Username</string>
+    <string name="phone_number">Mobile Number</string>
+    <string name="e_g_91_832_46">832******6</string>
+    <string name="no_address_found">No address found in this. Please add new deliver address</string>
+    <string name="add_address">Add adress</string>
+    <string name="change_address">Change Address</string>
+    <string name="order_shipped">Shipped</string>
+    <string name="order_placed">Placed</string>
+    <string name="order_delivered">Delivered</string>
+    <string name="order_cancelled">Cancelled</string>
+    <string name="my_orders">My Orders</string>
+    <string name="wishlist">Wishlist</string>
+    <string name="sample_text">Many novice writers tend to make a sharp distinction between content and style, thinking that a paper can be strong in one and weak in the other, but focusing on organization shows how content and style converge in deliberative academic writing. Your professors will view even the most elegant prose as rambling and tedious if there isn’t a careful, coherent argument to give the text meaning. Paragraphs are the “stuff ” of academic writing and, thus, worth our attention here.
+    </string>
+    <string name="disclaimer">The content of this application are for informational purposes only and not intended to be a substitutefor professional medical advice. diagnosis, or treatment, please seek the advice of a physician or other qualifiedhealth provider with any questions you may have regarding medical condition.Do not disregard professional medical adviceor delay in seeking it because of something you have read on this website.
+
+    </string>
+    <string name="you_can_t_change_email">You can\'t change email.</string>
+
+</resources>

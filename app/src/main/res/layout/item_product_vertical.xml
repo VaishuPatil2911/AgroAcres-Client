@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="5dp"
+    android:layout_weight="1"
+    android:id="@+id/productLyt"
+    android:background="@drawable/product_bg">
+
+
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/productImage"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:adjustViewBounds="true"
+        android:padding="10dp"
+        android:src="@drawable/fruits"
+        app:riv_corner_radius="5dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_below="@id/productImage"
+        android:layout_marginTop="2dp"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="Pankaj kasturi breath easy oil 200ml."
+            android:textSize="12sp"
+            android:gravity="start"
+            android:fontFamily="@font/bold"
+            android:textColor="@color/black"
+            android:id="@+id/productName"
+            android:singleLine="true"
+
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="2dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            >
+
+            <TextView
+                android:id="@+id/itemPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹ 877.0"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/bold"
+                android:textColor="@color/black"
+                />
+
+<!--            <TextView-->
+
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="₹1350.00"-->
+<!--                android:textSize="10sp"-->
+<!--                android:layout_marginStart="5dp"-->
+<!--                android:id="@+id/realPrice"-->
+<!--                android:textColor="@color/strikeTextColor"-->
+<!--                tools:ignore="SmallSp" />-->
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtBy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="By admin"
+            android:textSize="11sp"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp"
+            android:textColor="@color/green"
+            android:fontFamily="@font/regular"
+            />
+
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:background="@drawable/input_bg"
+           android:layout_marginTop="5dp"
+           android:layout_marginStart="2dp"
+           android:layout_marginEnd="2dp"
+           android:backgroundTint="@color/main_color"
+           >
+
+           <TextView
+               android:id="@+id/btnAddToBag"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_centerInParent="true"
+               android:padding="3sp"
+               android:text="ADD TO BAG"
+               android:textColor="@color/white"
+               android:textSize="13sp"
+               android:visibility="visible" />
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:weightSum="3"
+               android:padding="1dp"
+               android:gravity="center_vertical"
+               android:id="@+id/cartLyt"
+               android:visibility="gone"
+               >
+               <ImageView
+                   android:layout_width="0dp"
+                   android:layout_height="24dp"
+                   android:src="@drawable/minus"
+                   android:layout_weight="1"
+                   android:padding="3sp"
+                   app:tint="@color/white"
+                   android:id="@+id/btnMinus"
+                   android:background="?selectableItemBackgroundBorderless"
+                   />
+
+               <TextView
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="1"
+                   android:text="1"
+                   android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                   android:gravity="center"
+                   android:fontFamily="@font/bold"
+                   android:textColor="@color/white"
+                   android:id="@+id/itemCount"
+                   />
+
+               <ImageView
+                   android:layout_width="0dp"
+                   android:layout_height="24dp"
+                   android:src="@drawable/plus"
+                   android:layout_weight="1"
+                   android:padding="3sp"
+                   app:tint="@color/white"
+                   android:id="@+id/btnPlus"
+                   android:background="?selectableItemBackgroundBorderless"
+
+                   />
+
+
+
+
+
+
+
+           </LinearLayout>
+
+
+
+       </RelativeLayout>
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

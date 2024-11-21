@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true"
+        android:id="@+id/scrollView"
+        android:scrollbars="none"
+        android:layout_above="@id/r1"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                >
+                <androidx.appcompat.widget.Toolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/purple_500"
+                    app:title="Details"
+                    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                    android:id="@+id/toolbar"
+                    />
+
+                <RelativeLayout
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="15dp"
+                    >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/cart_icon"
+                        android:layout_centerVertical="true"
+                        android:adjustViewBounds="true"
+                        />
+
+                    <TextView
+                        android:layout_width="20sp"
+                        android:layout_height="20dp"
+                        android:text="3"
+                        android:layout_marginStart="15dp"
+                        android:background="@drawable/circle_bg"
+                        android:gravity="center"
+                        android:textSize="12sp"
+                        android:textColor="@color/white"
+                        android:fontFamily="sans-serif-medium"
+                        android:id="@+id/cartItemCount"
+                        android:visibility="gone"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        />
+
+
+
+
+
+
+                </RelativeLayout>
+
+
+
+
+
+
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp">
+
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/viewPager"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/white_bg"
+                        android:backgroundTint="@color/white" />
+
+                    <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+                        android:id="@+id/dotsIndicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/viewPager"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        app:dotsColor="#C9E4FA"
+                        app:dotsSize="9dp"
+                        app:dotsSpacing="4dp"
+                        app:dotsWidthFactor="1"
+                        app:selectedDotColor="@color/main_color" />
+
+
+
+
+
+
+                </RelativeLayout>
+
+
+
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="₹12,500"
+                android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+                android:fontFamily="@font/bold"
+                android:id="@+id/price"
+                android:padding="10dp"
+                android:includeFontPadding="false"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:text="Title of the product"
+                android:padding="3dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                android:fontFamily="@font/regular"
+                android:id="@+id/name"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quantity:"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/bold"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"                tools:text="Mobiles"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="#CC000000"
+                android:id="@+id/txtQuantity"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Category:"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/bold"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"                tools:text="Mobiles"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="#CC000000"
+                android:id="@+id/category"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#c6c6c6"
+                android:layout_marginTop="10dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description Info:"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/bold"
+
+
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:text="Hello this is new product ship into"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="#CC000000"
+                android:id="@+id/description"
+                android:layout_marginTop="3dp"
+                />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#c6c6c6"
+                android:layout_marginTop="10dp"
+                />
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/r1"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        >
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPurchase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/bold"
+            android:text="Add To Cart"
+            android:visibility="gone"
+            app:backgroundTint="#4CAF50"
+            app:cornerRadius="25dp"
+            tools:visibility="visible" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="This item added in cart"
+            android:textColor="#4CAF50"
+            android:layout_gravity="center"
+            android:layout_marginBottom="15dp"
+            android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+            android:id="@+id/txtAdded"
+            android:visibility="gone"
+            />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="This Item Was Sold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:gravity="center"
+            android:id="@+id/txtSold"
+            android:layout_marginBottom="5dp"
+            android:textColor="@android:color/holo_red_light"
+            android:background="@color/black"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:visibility="gone"
+
+            />
+
+
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>
